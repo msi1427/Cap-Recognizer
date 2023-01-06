@@ -35,7 +35,7 @@ Details can be found in `notebooks/data_prep.ipynb`
 
 # Model Deployment
 I deployed to model to HuggingFace Spaces Gradio App. The implementation can be found in `deployment` folder or [here](https://huggingface.co/spaces/msideadman/cap-recognizer). <br/>
-<img src = "deployment/gradio_app.png" width="800" height="400">
+<img src = "deployment/gradio_app.png" width="700" height="350">
 
 # API integration with GitHub Pages
 The deployed model API is integrated [here](msi1427.github.io/Cap-Recognizer/) in GitHub Pages Website. Implementation and other details can be found in `docs` folder.
