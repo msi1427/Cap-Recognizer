@@ -5,30 +5,9 @@ import gradio as gr
 # temp = pathlib.PosixPath
 # pathlib.PosixPath = pathlib.WindowsPath
 
-cap_labels = (
-    'balaclava cap', 
-     'baseball cap', 
-     'beanie cap', 
-     'boater hat', 
-     'bowler hat', 
-     'bucket hat', 
-     'cowboy hat', 
-     'fedora cap', 
-     'flat cap', 
-     'ivy cap', 
-     'kepi cap', 
-     'newsboy cap', 
-     'pork pie hat', 
-     'rasta cap', 
-     'sun hat', 
-     'taqiyah cap', 
-     'top hat', 
-     'trucker cap', 
-     'turban cap', 
-     'visor cap'
-)
-
 model = load_learner('cap-recognizer-v2.pkl')
+
+cap_labels = model.dls.vocab
 
 def recognize_image(image):
     pred, idx, probs = model.predict(image)
