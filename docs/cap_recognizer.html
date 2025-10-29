@@ -8,10 +8,8 @@ layout: page
 <script>
     async function loaded(reader) {   
         const client = await Client.connect("msideadman/cap-recognizer");
-        const result = await client.predict("/predict", { 
-					image: reader.result, 
-	    });
-        const label = result.data[0].label;
+        const result = await client.predict("/predict", { image: reader.result });
+        const label = result;
         results.innerHTML = `<br/> <img src = "${reader.result}" width="500"> <p>${label}</p>`;
     }
     function read() {
